@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gate-futures"
+version = "1.0.0"
+description = "Gate.io 永续合约 Python SDK - 异步API + WebSocket实时行情"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "AI Agent", email = "210362553@qq.com"}
+]
+keywords = [
+    "gate.io", "gateio", "futures", "perpetual", "永续合约",
+    "加密货币", "量化交易", "trading bot", "binance alternative",
+    "hyperliquid alternative", "python", "async", "websocket",
+    " cryptocurrency", "trading", "bitcoin", "ethereum"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "black", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/lzhao8956-glitch/gate-futures-sdk"
+Documentation = "https://github.com/lzhao8956-glitch/gate-futures-sdk#readme"
+Repository = "https://github.com/lzhao8956-glitch/gate-futures-sdk"
+Issues = "https://github.com/lzhao8956-glitch/gate-futures-sdk/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gate_futures*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
